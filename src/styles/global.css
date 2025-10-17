@@ -1,0 +1,31 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Verde turquesa pastel */
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Personalizar colores de Bootstrap */
+.btn-primary {
+    background-color: #00796b;
+    border-color: #00796b;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    border-color: #004d40;
+}
+
+.navbar-brand {
+    color: #00796b !important;
+    font-weight: bold;
+}
+
+/* Asegurar que el contenido tenga suficiente espacio */
+main {
+    min-height: calc(100vh - 76px);
+}
