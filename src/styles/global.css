@@ -2,27 +2,44 @@
 
 /* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa; /* Verde turquesa pastel */
+    font-family: 'Arial', sans-serif;
+    background-color: #f6f8f7; /* Color de fondo de tu diseño */
     color: #000000;
     margin: 0;
     padding: 0;
 }
 
-/* Personalizar colores de Bootstrap */
+/* Personalizar colores de Bootstrap para que coincidan con tu diseño */
 .btn-primary {
-    background-color: #00796b;
-    border-color: #00796b;
+    background-color: #20df9f; /* Verde de tu diseño */
+    border-color: #20df9f;
+    color: #11211c; /* Color de texto oscuro */
 }
 
 .btn-primary:hover {
-    background-color: #004d40;
-    border-color: #004d40;
+    background-color: #1bc98c;
+    border-color: #1bc98c;
+    color: #11211c;
+}
+
+.btn-outline-primary {
+    color: #20df9f;
+    border-color: #20df9f;
+}
+
+.btn-outline-primary:hover {
+    background-color: #20df9f;
+    border-color: #20df9f;
+    color: #11211c;
 }
 
 .navbar-brand {
-    color: #00796b !important;
+    color: #000000 !important;
     font-weight: bold;
+}
+
+.text-primary {
+    color: #20df9f !important;
 }
 
 /* Asegurar que el contenido tenga suficiente espacio */
