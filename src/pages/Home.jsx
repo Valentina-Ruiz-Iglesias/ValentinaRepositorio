@@ -122,7 +122,71 @@ const Home = () => {
                 {activeSection === 'content' && (
                     <div className="section">
                         <h2>Mis Proyectos</h2>
-                        <p>Incluiré mi base de datos de Pokémon y otros proyectos...</p>
+
+                        <div className="projects-grid">
+                            {/* Proyecto Principal - Base de datos Pokémon */}
+                            <div className="project-card featured">
+                                <div className="project-header">
+                                    <h3>🏆 Pokémon Database</h3>
+                                    <span className="project-badge">Proyecto Destacado</span>
+                                </div>
+                                <p className="project-description">
+                                    Base de datos interactiva de Pokémon desarrollada con Python y SQL.
+                                    Incluye información detallada de stats, tipos, evoluciones y habilidades
+                                    de más de 800 Pokémon.
+                                </p>
+                                <div className="project-tech">
+                                    <span className="tech-tag">Python</span>
+                                    <span className="tech-tag">SQL</span>
+                                    <span className="tech-tag">Pandas</span>
+                                    <span className="tech-tag">Data Analysis</span>
+                                </div>
+                                <div className="project-features">
+                                    <h4>Características:</h4>
+                                    <ul>
+                                        <li>Búsqueda avanzada por tipo y generación</li>
+                                        <li>Análisis comparativo de stats</li>
+                                        <li>Sistema de filtros múltiples</li>
+                                        <li>Exportación de datos a CSV</li>
+                                    </ul>
+                                </div>
+                                <div className="project-links">
+                                    <button className="project-link-btn">📁 Ver Código</button>
+                                    <button className="project-link-btn">🎮 Demo Live</button>
+                                </div>
+                            </div>
+
+                            {/* Proyectos Placeholder para futuros */}
+                            <div className="project-card">
+                                <div className="project-header">
+                                    <h3>🔐 Security Dashboard</h3>
+                                    <span className="project-badge coming-soon">Próximamente</span>
+                                </div>
+                                <p className="project-description">
+                                    Panel de control para monitorización de seguridad en tiempo real.
+                                </p>
+                                <div className="project-tech">
+                                    <span className="tech-tag">React</span>
+                                    <span className="tech-tag">Node.js</span>
+                                    <span className="tech-tag">Cybersecurity</span>
+                                </div>
+                            </div>
+
+                            <div className="project-card">
+                                <div className="project-header">
+                                    <h3>🎨 Portfolio V1</h3>
+                                    <span className="project-badge coming-soon">Próximamente</span>
+                                </div>
+                                <p className="project-description">
+                                    Mi primer portfolio web desarrollado durante mis inicios en frontend.
+                                </p>
+                                <div className="project-tech">
+                                    <span className="tech-tag">HTML</span>
+                                    <span className="tech-tag">CSS</span>
+                                    <span className="tech-tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 )}
 
