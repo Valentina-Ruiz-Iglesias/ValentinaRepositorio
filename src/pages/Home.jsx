@@ -1,77 +1,140 @@
-import React from 'react';
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import '../styles/global.css';
 
-function Home() {
+const Home = () => {
+    const [activeSection, setActiveSection] = useState('feed');
+
     return (
-        <Container className="py-5">
-            <Row className="text-center">
-                <Col>
-                    {/* Imagen de perfil */}
-                    <div className="text-center mb-4">
-                        <Image
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjcFQ32ODfvHWiA0PyZ2q80lpA3cr74Hiy8IWEWEsobJImtO90BLvfObZj6U-GWINhKYyG9LBItr9YVRfo1eDf9Qrng4FXtWoo1ST-FbkiKpT_GaKycnd_hvxF4S_LPSH5dK2tusV0zfXbNOvFUeuP3vDPVfKL-T8tRH_7rRDK50_GroSRzKjTpIhFjtUU_W4nhv0FC-9Urvt2c-AakxQFflZ8u5a3vFburBacX5P8MeN2bkT3qt86B1ZE_2YG42aaaE5RfBbglic"
-                            alt="Valentina Ruiz - Ingeniera en informatica"
-                            roundedCircle
-                            style={{
-                                width: '160px',
-                                height: '160px',
-                                objectFit: 'cover',
-                                border: '4px solid rgba(0, 121, 107, 0.3)'
-                            }}
-                            className="mb-4"
-                        />
-                    </div>
+        <div className="twitter-profile">
+            {/* Header - Perfil */}
+            <header className="profile-header">
+                <div className="profile-info">
+                    <h1 className="profile-name">Valentina Ruiz Iglesias</h1>
+                    <p className="profile-tagline">"El éxito es caer siete veces y levantarse ocho"</p>
+                    <p className="profile-bio">Estudiante de Ingeniería en Informática · Ciberseguridad · Frontend Developer</p>
+                </div>
+            </header>
 
-                    {/* Nombre y descripción */}
-                    <h1 className="display-4 fw-bold mb-3 text-dark">
-                        Valentina Ruiz
-                    </h1>
-                    <p className="lead text-muted mb-4" style={{ maxWidth: '600px', margin: '0 auto' }}>
-                        Bienvenida a mi portafolio. Soy una Estudiante de ingenieria en informatica,
-                        me apasiona la ciberseguridad y el desarrollo web
-                        Mi objetivo es crear soluciones digitales simples y efectivas.
-                    </p>
+            {/* Navegación - Pestañas */}
+            <nav className="profile-nav">
+                <button
+                    className={`nav-item ${activeSection === 'feed' ? 'active' : ''}`}
+                    onClick={() => setActiveSection('feed')}
+                >
+                    Feed
+                </button>
+                <button
+                    className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
+                    onClick={() => setActiveSection('about')}
+                >
+                    About
+                </button>
+                <button
+                    className={`nav-item ${activeSection === 'content' ? 'active' : ''}`}
+                    onClick={() => setActiveSection('content')}
+                >
+                    Content
+                </button>
+                <button
+                    className={`nav-item ${activeSection === 'guestbook' ? 'active' : ''}`}
+                    onClick={() => setActiveSection('guestbook')}
+                >
+                    Guestbook
+                </button>
+            </nav>
 
-                    {/* Botones */}
-                    <div className="mt-4">
-                        <Button
-                            variant="primary"
-                            size="lg"
-                            className="me-3 mb-2"
-                            href="#portafolio"
-                        >
-                            Ver Portafolio
-                        </Button>
-                        <Button
-                            variant="outline-primary"
-                            size="lg"
-                            className="mb-2"
-                            href="#sobre-mi"
-                        >
-                            Sobre Mí
-                        </Button>
+            {/* Contenido de las secciones */}
+            <main className="profile-content">
+                {activeSection === 'feed' && (
+                    <div className="section">
+                        <h2>Mi Actividad Reciente</h2>
+                        <p>Próximamente: updates sobre mis proyectos y aprendizaje...</p>
                     </div>
-                </Col>
-            </Row>
+                )}
 
-            {/* Sección Sobre Mí */}
-            <Row id="sobre-mi" className="mt-5 pt-5">
-                <Col lg={8} className="mx-auto">
-                    <h2 className="h3 fw-bold mb-4 text-center">Sobre Mí</h2>
-                    <div className="text-center">
-                        <p className="text-muted mb-3">
-                            Soy diseñadora y me apasiona crear experiencias visuales atractivas y funcionales.
-                            Con experiencia en diseño de interfaces, experiencia de usuario y branding.
-                        </p>
-                        <p className="text-muted">
-                            Mi enfoque combina estética visual con usabilidad, siempre pensando en las necesidades
-                            del usuario final y los objetivos del negocio.
-                        </p>
+                {activeSection === 'about' && (
+                    <div className="section">
+                        <h2>Sobre Mí</h2>
+
+                        <div className="about-content">
+                            <div className="about-text">
+                                <p>
+                                    Me encuentro estudiando ingeniería en Informática, me gusta la ciberseguridad
+                                    y el desarrollo frontend. Mi meta es contribuir a la creacion de
+                                    soluciones tecnologicas seguras, funcionales y amigables que ayuden y contribuyan
+                                    a la sociedad.
+                                </p>
+                            </div>
+
+                            <div className="skills-section">
+                                <h3>Tecnologías & Lenguajes</h3>
+                                <div className="skills-grid">
+                                    <div className="skill-item">
+                                        <span className="skill-name">HTML</span>
+                                        <div className="skill-bar">
+                                            <div className="skill-level html"></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="skill-item">
+                                        <span className="skill-name">CSS</span>
+                                        <div className="skill-bar">
+                                            <div className="skill-level css"></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="skill-item">
+                                        <span className="skill-name">JavaScript</span>
+                                        <div className="skill-bar">
+                                            <div className="skill-level javascript"></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="skill-item">
+                                        <span className="skill-name">Python</span>
+                                        <div className="skill-bar">
+                                            <div className="skill-level python"></div>
+                                        </div>
+                                    </div>
+
+                                    <div className="skill-item">
+                                        <span className="skill-name">Kotlin</span>
+                                        <div className="skill-bar">
+                                            <div className="skill-level kotlin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="interests-section">
+                                <h3>Áreas de Interés</h3>
+                                <div className="interests-tags">
+                                    <span className="interest-tag"> Ciberseguridad</span>
+                                    <span className="interest-tag"> Frontend Development</span>
+                                    <span className="interest-tag"> Desarrollo Mobile</span>
+                                    <span className="interest-tag"> UX/UI Design</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </Col>
-            </Row>
-        </Container>
+                )}
+
+                {activeSection === 'content' && (
+                    <div className="section">
+                        <h2>Mis Proyectos</h2>
+                        <p>Incluiré mi base de datos de Pokémon y otros proyectos...</p>
+                    </div>
+                )}
+
+                {activeSection === 'guestbook' && (
+                    <div className="section">
+                        <h2>Contacto</h2>
+                        <p>Formulario de contacto profesional...</p>
+                    </div>
+                )}
+            </main>
+        </div>
     );
-}
+};
 
 export default Home;
