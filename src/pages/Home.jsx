@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/global.css';
+import fotoPerfil from '../assets/imagenes/1000157373.jpg';
 
 const Home = () => {
     const [activeSection, setActiveSection] = useState('feed');
@@ -12,13 +13,12 @@ const Home = () => {
     return (
         <div className={`twitter-profile ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
             {/* Header - Perfil */}
-            {/* Header - Perfil */}
             <header className="profile-header">
                 <div className="profile-info">
                     {/* Foto de perfil */}
                     <div className="profile-picture">
                         <img
-                            src="/assets/imageners/1000157373.jpg"  //
+                            src={fotoPerfil}
                             alt="Valentina Ruiz Iglesias"
                             className="profile-img"
                         />
