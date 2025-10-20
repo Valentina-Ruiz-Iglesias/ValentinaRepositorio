@@ -36,23 +36,23 @@ const Home = () => {
                     className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
                     onClick={() => setActiveSection('about')}
                 >
-                    About
+                    Sobre mi
                 </button>
                 <button
                     className={`nav-item ${activeSection === 'content' ? 'active' : ''}`}
                     onClick={() => setActiveSection('content')}
                 >
-                    Content
+                    Proyectos
                 </button>
                 <button
                     className={`nav-item ${activeSection === 'guestbook' ? 'active' : ''}`}
                     onClick={() => setActiveSection('guestbook')}
                 >
-                    Guestbook
+                    Contactame
                 </button>
             </nav>
 
-            {/* Contenido de las secciones */}
+            {/* Secciones */}
             <main className="profile-content">
                 {activeSection === 'feed' && (
                     <div className="section">
@@ -61,45 +61,31 @@ const Home = () => {
                         <div className="feed-timeline">
                             <div className="feed-item">
                                 <div className="feed-header">
-                                    <span className="feed-date">Enero 2024</span>
-                                    <span className="feed-badge">🎯 Meta Cumplida</span>
+                                    <span className="feed-date">Octubre 2025</span>
+                                    <span className="feed-badge">Certificacion obtenida!</span>
                                 </div>
                                 <p className="feed-content">
-                                    Completé mi proyecto <strong>PocketCardsDB</strong> - una base de datos completa de Pokémon TCG
-                                    con más de 800 cartas y sistema de simulación de sobres.
+                                    Completé mi curso de Ethical Hacking de Certiprof!
                                 </p>
                             </div>
 
                             <div className="feed-item">
                                 <div className="feed-header">
-                                    <span className="feed-date">Diciembre 2023</span>
-                                    <span className="feed-badge">📚 Aprendizaje</span>
+                                    <span className="feed-date">Septiembre 2025</span>
+                                    <span className="feed-badge">Proyecto avanzado</span>
                                 </div>
                                 <p className="feed-content">
-                                    Profundicé en <strong>Python y Pandas</strong> para análisis de datos, aplicándolo directamente
-                                    en mi proyecto de base de datos Pokémon.
+                                    Primera version de PocketCardDB terminada!
                                 </p>
                             </div>
 
                             <div className="feed-item">
                                 <div className="feed-header">
-                                    <span className="feed-date">Noviembre 2023</span>
-                                    <span className="feed-badge">🔐 Seguridad</span>
+                                    <span className="feed-date">Enero 2025</span>
+                                    <span className="feed-badge">Certificacion obtenida!</span>
                                 </div>
                                 <p className="feed-content">
-                                    Comencé a explorar el mundo de la <strong>ciberseguridad</strong>, enfocándome en prácticas
-                                    de desarrollo seguro y análisis de vulnerabilidades.
-                                </p>
-                            </div>
-
-                            <div className="feed-item">
-                                <div className="feed-header">
-                                    <span className="feed-date">Octubre 2023</span>
-                                    <span className="feed-badge">🎨 Desarrollo</span>
-                                </div>
-                                <p className="feed-content">
-                                    Inicié el desarrollo de este <strong>portfolio personal</strong> para mostrar mis proyectos
-                                    y habilidades en frontend development.
+                                    Completé mi curso de introduccion a la cibeseguridad!
                                 </p>
                             </div>
                         </div>
@@ -116,7 +102,7 @@ const Home = () => {
                                     Me encuentro estudiando ingeniería en Informática, me gusta la ciberseguridad
                                     y el desarrollo frontend. Mi meta es contribuir a la creacion de
                                     soluciones tecnologicas seguras, funcionales y amigables que ayuden y contribuyan
-                                    a la sociedad.
+                                    a la sociedad y al medioambiente.
                                 </p>
                             </div>
 
@@ -163,10 +149,10 @@ const Home = () => {
                             <div className="interests-section">
                                 <h3>Áreas de Interés</h3>
                                 <div className="interests-tags">
-                                    <span className="interest-tag">🔒 Ciberseguridad</span>
-                                    <span className="interest-tag">🎨 Frontend Development</span>
-                                    <span className="interest-tag">📱 Desarrollo Mobile</span>
-                                    <span className="interest-tag">⚡ UX/UI Design</span>
+                                    <span className="interest-tag">Ciberseguridad</span>
+                                    <span className="interest-tag">Frontend Development</span>
+                                    <span className="interest-tag">Desarrollo Mobile</span>
+                                    <span className="interest-tag">UX/UI Design</span>
                                 </div>
                             </div>
                         </div>
@@ -206,33 +192,44 @@ const Home = () => {
                                 </div>
                                 <div className="project-links">
                                     <button className="project-link-btn">📁 Ver Código</button>
-                                    <button className="project-link-btn">🎮 Demo Live</button>
                                 </div>
                             </div>
 
-                            {/* Proyectos Placeholder para futuros */}
-                            <div className="project-card">
+                            <div className="project-card featured">
                                 <div className="project-header">
-                                    <h3>🔐 Security Dashboard</h3>
-                                    <span className="project-badge coming-soon">Próximamente</span>
+                                    <h3>Edutech SPA</h3>
+                                    <span className="project-badge">Proyecto terminado</span>
                                 </div>
                                 <p className="project-description">
-                                    Panel de control para monitorización de seguridad en tiempo real.
+                                 Sistema creado para realizar una migracion de sistema monolitico a sistema
+                                    de microservicios
                                 </p>
                                 <div className="project-tech">
-                                    <span className="tech-tag">React</span>
-                                    <span className="tech-tag">Node.js</span>
-                                    <span className="tech-tag">Cybersecurity</span>
+                                    <span className="tech-tag">HateOAS</span>
+                                    <span className="tech-tag">SQL</span>
+                                    <span className="tech-tag">SpringWeb</span>
+                                </div>
+                                <div className="project-features">
+                                    <h4>Características:</h4>
+                                    <ul>
+                                        <li>Distribucion de servicios</li>
+                                        <li>Optimizacion del rendimiento</li>
+                                        <li>Aumento de disponibilidad</li>
+                                        <li>Mejora en la escalabilidad</li>
+                                    </ul>
+                                </div>
+                                <div className="project-links">
+                                    <button className="project-link-btn">📁 Ver Código</button>
                                 </div>
                             </div>
 
                             <div className="project-card">
                                 <div className="project-header">
-                                    <h3>🎨 Portfolio V1</h3>
+                                    <h3>Primer portfolio</h3>
                                     <span className="project-badge coming-soon">Próximamente</span>
                                 </div>
                                 <p className="project-description">
-                                    Mi primer portfolio web desarrollado durante mis inicios en frontend.
+                                    Primer portfolio web desarrollado durante el curso Fullstack II
                                 </p>
                                 <div className="project-tech">
                                     <span className="tech-tag">HTML</span>
