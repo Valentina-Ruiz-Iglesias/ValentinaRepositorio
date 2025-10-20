@@ -12,12 +12,26 @@ const Home = () => {
     return (
         <div className={`twitter-profile ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
             {/* Header - Perfil */}
+            {/* Header - Perfil */}
             <header className="profile-header">
                 <div className="profile-info">
-                    <h1 className="profile-name">Valentina Ruiz Iglesias</h1>
-                    <p className="profile-tagline">"El éxito es caer siete veces y levantarse ocho"</p>
-                    <p className="profile-bio">Estudiante de Ingeniería en Informática · Ciberseguridad · Frontend Developer</p>
+                    {/* Foto de perfil */}
+                    <div className="profile-picture">
+                        <img
+                            src="/assets/imageners/1000157373.jpg"  //
+                            alt="Valentina Ruiz Iglesias"
+                            className="profile-img"
+                        />
+                    </div>
+
+                    {/* Información de perfil */}
+                    <div className="profile-text">
+                        <h1 className="profile-name">Valentina Ruiz Iglesias</h1>
+                        <p className="profile-tagline">"Un dia a la vez"</p>
+                        <p className="profile-bio">Estudiante de Ingeniería en Informática · Ciberseguridad </p>
+                    </div>
                 </div>
+
                 {/* Botón de toggle del tema */}
                 <button className="theme-toggle" onClick={toggleTheme}>
                     {isDarkMode ? '☀️' : '🌙'}
@@ -179,8 +193,7 @@ const Home = () => {
                                 <div className="project-tech">
                                     <span className="tech-tag">Python</span>
                                     <span className="tech-tag">SQL</span>
-                                    <span className="tech-tag">Pandas</span>
-                                    <span className="tech-tag">Data Analysis</span>
+                                    <span className="tech-tag">Analisis de datos</span>
                                 </div>
                                 <div className="project-features">
                                     <h4>Características:</h4>

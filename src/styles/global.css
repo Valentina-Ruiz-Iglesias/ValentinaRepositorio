@@ -70,6 +70,31 @@ body {
     align-items: flex-start;
 }
 
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+/* Foto de perfil */
+.profile-picture {
+    margin-bottom: 16px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+}
+
+.profile-text {
+    /* Este div contiene el texto para mejor organización */
+}
+
 .profile-name {
     font-size: 20px;
     font-weight: 700;
@@ -174,6 +199,11 @@ body {
     .twitter-profile {
         border-left: none;
         border-right: none;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -386,7 +416,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Estilos para la sección Guestbook */
+/* Estilos para la sección contacto */
 .section-subtitle {
     color: var(--text-secondary);
     font-size: 14px;
