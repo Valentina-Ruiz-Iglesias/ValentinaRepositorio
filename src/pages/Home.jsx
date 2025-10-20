@@ -204,7 +204,14 @@ const Home = () => {
                                     </ul>
                                 </div>
                                 <div className="project-links">
-                                    <button className="project-link-btn">📁 Ver Código</button>
+                                    <a
+                                        href="https://github.com/Valentina-Ruiz-Iglesias"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="project-link-btn"
+                                    >
+                                        📁 Ver Código
+                                    </a>
                                 </div>
                             </div>
 
@@ -232,7 +239,14 @@ const Home = () => {
                                     </ul>
                                 </div>
                                 <div className="project-links">
-                                    <button className="project-link-btn">📁 Ver Código</button>
+                                    <a
+                                        href="https://github.com/Valentina-Ruiz-Iglesias"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="project-link-btn"
+                                    >
+                                        📁 Ver Código
+                                    </a>
                                 </div>
                             </div>
 
