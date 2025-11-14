@@ -5,7 +5,7 @@ module.exports = function(config) {
         frameworks: ['jasmine'],
 
         files: [
-            // Incluir archivos CSS globales primero
+            // archivos CSS globales primero
             { pattern: 'src/styles/global.css', watched: true, included: true, served: true },
             { pattern: 'src/styles/App.css', watched: true, included: true, served: true },
             // Archivos de prueba
