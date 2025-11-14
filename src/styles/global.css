@@ -1,4 +1,3 @@
-/* Variables CSS para temas */
 :root {
     /* Colores modo oscuro (Twitter) */
     --dark-bg: #000;
@@ -15,6 +14,14 @@
     --light-text-primary: #000000;
     --light-text-secondary: #536471;
     --light-accent: #1d9bf0;
+
+    /* Valores por defecto de tema (modo oscuro al cargar) */
+    --bg-color: var(--dark-bg);
+    --card-color: var(--dark-card);
+    --border-color: var(--dark-border);
+    --text-primary: var(--dark-text-primary);
+    --text-secondary: var(--dark-text-secondary);
+    --accent-color: var(--dark-accent);
 }
 
 /* Aplicar variables según el tema */
@@ -194,7 +201,7 @@ body {
     outline-offset: -2px;
 }
 
-/* Responsive */
+/* Responsive móvil */
 @media (max-width: 688px) {
     .twitter-profile {
         border-left: none;
@@ -220,7 +227,8 @@ body {
     line-height: 1.6;
 }
 
-.skills-section h3, .interests-section h3 {
+.skills-section h3,
+.interests-section h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 16px;
@@ -235,19 +243,20 @@ body {
 
 .skill-item {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
 }
 
 .skill-name {
-    min-width: 100px;
     font-size: 14px;
     color: var(--text-primary);
     font-weight: 500;
 }
 
 .skill-bar {
-    flex: 1;
+    width: 100%;
     height: 8px;
     background-color: var(--border-color);
     border-radius: 4px;
@@ -455,7 +464,8 @@ body {
     margin-bottom: 6px;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
     width: 100%;
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
@@ -466,12 +476,14 @@ body {
     transition: border-color 0.2s ease;
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
     outline: none;
     border-color: var(--accent-color);
 }
 
-.form-input::placeholder, .form-textarea::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
     color: var(--text-secondary);
 }
 
@@ -534,6 +546,7 @@ body {
     font-size: 13px;
     margin: 0;
 }
+
 /* Estilos para links de contacto */
 .contact-link {
     color: var(--text-secondary);
@@ -546,6 +559,7 @@ body {
     color: var(--accent-color);
     text-decoration: underline;
 }
+
 /* Estilos para la sección Feed */
 .feed-timeline {
     display: flex;
@@ -593,4 +607,65 @@ body {
     font-size: 14px;
     line-height: 1.5;
     margin: 0;
+}
+
+/* Contenedor principal debajo de la barra de navegación */
+.page-content {
+    padding: 16px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+/* ===============================
+   Layout responsive para tablet y desktop
+   =============================== */
+
+@media (min-width: 768px) {
+    /* El contenedor tipo Twitter se hace más ancho en pantallas medianas */
+    .twitter-profile {
+        max-width: 900px;
+        margin-top: 16px;
+    }
+
+    /* Sobre mí: columnas en vez de todo en una sola */
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .skills-section,
+    .interests-section {
+        flex: 1;
+    }
+
+    /* Contacto (guestbook): formulario + datos lado a lado */
+    .guestbook-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1;
+    }
+
+    /* Proyectos en grilla de 2 columnas */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Un poco más ancho en desktop grande */
+    .twitter-profile {
+        max-width: 1100px;
+    }
+
+    /* Proyectos en grilla de 3 columnas en pantallas grandes */
+    .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
